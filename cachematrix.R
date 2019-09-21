@@ -4,7 +4,7 @@
 makeCacheMatrix <- function(x = matrix()) { ## this function creates special matrix to cache inverse
         v <- NULL
         set <- function(y) {  
-                x <<- y   ## sets the value of the matrix
+                x <<- y    ## sets the value of the matrix
                 v <<- NULL
         }
         get <- function() x   ## gets the value of the matrix
@@ -28,5 +28,6 @@ cacheSolve <- function(x, ...) { ## this function calculates inverse of matrix i
         v <- solve(Matx, ...)	## returns the inverse matrix
         x$setinverse(v)
         v
+        
 }
 
